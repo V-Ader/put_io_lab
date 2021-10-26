@@ -1,4 +1,5 @@
-a ja zmienilem to tu
+zmiana na stronie - 25.10
+
 
 Karol Zawislak
 
