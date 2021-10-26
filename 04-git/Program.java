@@ -7,6 +7,7 @@ zmiana w program.java
 
 zmiana 1
 22
+2
 
 zmiana 2
 
