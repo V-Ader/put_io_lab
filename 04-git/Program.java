@@ -1,6 +1,7 @@
 zmiana pre
 11
 asd
+1
 
 zmiana w program.java
 
