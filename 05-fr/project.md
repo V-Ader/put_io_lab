@@ -50,10 +50,13 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC2](#uc2): Zmienienie statusu przesyłki
 
 [Kupujący](#ac2)
-* ...
+* [UC3](#uc3): Zalicytowanie w aukcji*
+* [UC4](#uc4): Wygranie aukcji*
+* [UC5](#uc5): Przegranie aukcji
+* [UC6](#uc6): Opłacenie przedmiotu*
 
 ---
 <a id="uc1"></a>
@@ -63,7 +66,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) zgłasza do systemu chęć wystawienia produktu na aukcję.
-2. System prosi o podanie danych produktu i ceny wywoławczej.
+2. System prosi o podanie danych produktu i ceny wywoławc-zej.
 3. [Sprzedający](#ac1) podaje dane produktu oraz cenę wywoławczą.
 4. System weryfikuje poprawność danych.
 5. System informuje o pomyślnym wystawieniu produktu na aukcję.
@@ -88,6 +91,63 @@ Osoba chcąca zakupić produkt na aukcji.
 
 1.A. ...
 * 4.A.1. ...
+
+---
+
+<a id="uc3"></a>
+### UC3: Zalicytowanie w aukcji
+
+**Aktorzy:** [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Kupujący](#ac2) włącza okno aukcji oraz klika opcję licytowania przedmiotu.
+2. System przedstawia aktualną wartość przedmiotu i prosi o podanie danych osobowych oraz kwoty.
+3. [Kupujący](#ac2) uzupełnia dane osobowe oraz kwotę wyższą od podanej przez system.
+4. System zatwierdza podane dane.
+5. System informuje o pomyślnym zalicytowaniu przedmiotu na aukcji.
+
+**Scenariusze alternatywne:** 
+4.A. Podano kowtę niższą lub równą od aktualnej wartości produktu.
+* 4.A.1. System informuje o błędnie podanych danych.
+* 4.A.2. Przejdź do kroku 2.
+
+---
+
+<a id="uc4"></a>
+### UC4: Wygranie aukcji
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. System kończy aukcję i przekazuje informacje do [Kupujący](#ac2).
+2. System przekazuje informacje [Sprzedający](#ac1) z damymi [Kupujący](#ac2).
+
+**Scenariusze alternatywne:** 
+1.A. Aukcja zakończyła się ale nikt nie zalicytował
+* 1.A.1. System informuje [Sprzedający](#ac1) o braku zainteresowanych.
+
+
+---
+
+<a id="uc6"></a>
+### UC6: Opłacenie przedmiotu
+
+**Aktorzy:** [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Kupujący](#ac2) wybiera opcję opłacenia wygranych aukcji i wybiera tę, którą chce opłacić.
+2. System wyświetla [Kupujący](#ac2) informacje o przedmiocie, kwotę którą [Kupujący](#ac2) musi uiścić oraz pozostały czas na dokonanie transakcji.
+3. [Kupujący](#ac2) wybiera przycisk akceptacji i przeniesienia do systemu obsługującego płatności.
+4. System oczekuje na potwierdzenie opłat.
+5. System informuje [Kupujący](#ac2) o zakończeniu transakcji.
+
+**Scenariusze alternatywne:** 
+2.A. Brak możliwości opłacenia przedmiotu
+* 2.A.1. System informuje [Kupujący](#ac2) o braku możliwości opłacenia należności z powodu zbyt długiego oczekiwania.
+
+4.A. System nie otrzymał informacji z potwierdzeniem płatności
+* 2.A.1. System informuje [Kupujący](#ac2) o niepowodzeniu płatności
+* 2.A.2. Przejdź do kroku 2.
 
 ---
 
