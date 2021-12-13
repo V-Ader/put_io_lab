@@ -1,0 +1,24 @@
+indeks: 145303
+
+Zadanie 3.1
+
+Tak, przestaną działać.
+
+@BeforeAll wykonuje się tylko raz na początku
+@BeforeEach wykonuje się kożdorazowo przed testem
+
+W dodatku setUp oraz nasze pole calculator nie są statyczne, co uniemożliwi wykorzystanie @BeforeAll
+
+
+
+Zadanie 4.1
+test1 -> Failure
+test2 -> Error
+
+Oczekuje na AssertionFailedError.
+
+Zadanie 5.1
+Jest to whitebox.
+
+Zadanie 5.2
+Możliwych jest 6 ścieżek
