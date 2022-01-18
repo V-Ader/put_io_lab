@@ -1,0 +1,12 @@
+Zadanie 1.
+
+Przy pierwszej probie otrzymałem średni wynik na poziomie 5800.
+Po optymalizacji wynik ten wyniósł 150.
+
+Wynikało to z niepotrzebnego wyliczania średniej wielokrotnie.
+
+Zadanie 2.
+
+Przy pierwszym uruchomieniu testowania otrzymano wynik 1,9/sec karty na sekundę, a zakładano 5,5/sec.
+
+Po ustawieniu liczby drukarek na 29 otrzymałem wynik 5,9/sec
